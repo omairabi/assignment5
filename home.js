@@ -53,7 +53,8 @@ const displayModal = (item) => {
     let icon = "";
 
     if (label === "bug") {
-      design = "bg-red-50 text-red-500 border-none rounded-full text-[12px]";
+      design =
+        " bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
       icon = "./assets/bug.png";
     } else if (label === "help wanted") {
       design =
