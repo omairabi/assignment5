@@ -1,4 +1,4 @@
-console.log("All ok");
+console.log("hello");
 
 document.getElementById("signIn").addEventListener("click", function () {
   /**
