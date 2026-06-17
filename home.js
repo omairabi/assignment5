@@ -1,6 +1,5 @@
-console.log("hello! All ok");
+console.log("check");
 
-// spineer show function
 const showSpinner = () => {
   const spinner = document.getElementById("spinner");
   const mainSection = document.getElementById("mainSection");
@@ -15,7 +14,6 @@ const hideSpinner = () => {
   mainSection.classList.remove("hidden");
 };
 
-// display modal
 const loadModal = (id) => {
   console.log(id);
   fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
@@ -54,7 +52,7 @@ const displayModal = (item) => {
 
     if (label === "bug") {
       design =
-        " bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
+        "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
       icon = "./assets/bug.png";
     } else if (label === "help wanted") {
       design =
@@ -62,10 +60,11 @@ const displayModal = (item) => {
       icon = "./assets/helpWanted.png";
     } else if (label === "enhancement") {
       design =
-        "bg-green-50 text-green-500 border-none rounded-full text-[12px]";
+        "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
       icon = "./assets/inhancement.png";
     } else if (label === "good first issue") {
-      design = "bg-blue-50 text-blue-500 border-none rounded-full text-[12px]";
+      design =
+        "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
     } else if (label === "documentation") {
       design =
         "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
@@ -138,23 +137,23 @@ function displayAllCards(data) {
     let priorityDesign = "";
     if (item.priority == "high") {
       priorityDesign =
-        "py-1 px-6 bg-red-100 text-red-500 border-none rounded-full text-[14px]";
+        "py-1 px-6 bg-amber-50 text-amber-500 border-none rounded-full text-[14px]";
     } else if (item.priority == "medium") {
       priorityDesign =
         "py-1 px-6 bg-amber-100 text-amber-500 border-none rounded-full text-[14px]";
     } else {
       priorityDesign =
-        "py-1 px-6 bg-gray-100 text-gray-500 border-none rounded-full text-[14px]";
+        "py-1 px-6 bg-amber-50 text-amber-500 border-none rounded-full text-[14px]";
     }
 
-    // labels buttons toiri kora holo
     let btns = "";
     item.labels.forEach((label) => {
       let design = "";
       let icon = "";
 
       if (label === "bug") {
-        design = "bg-red-50 text-red-500 border-none rounded-full text-[12px]";
+        design =
+          "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
         icon = "./assets/bug.png";
       } else if (label === "help wanted") {
         design =
@@ -162,11 +161,11 @@ function displayAllCards(data) {
         icon = "./assets/helpWanted.png";
       } else if (label === "enhancement") {
         design =
-          "bg-green-50 text-green-500 border-none rounded-full text-[12px]";
+          "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
         icon = "./assets/inhancement.png";
       } else if (label === "good first issue") {
         design =
-          "bg-blue-50 text-blue-500 border-none rounded-full text-[12px]";
+          "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";
       } else if (label === "documentation") {
         design =
           "bg-amber-50 text-amber-500 border-none rounded-full text-[12px]";

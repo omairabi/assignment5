@@ -22,6 +22,6 @@ document.getElementById("signIn").addEventListener("click", function () {
     alert("Sign in success");
     window.location.assign("home.html");
   } else {
-    alert("Sign in faild");
+    alert("Sign in failed");
   }
 });
