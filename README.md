@@ -1,128 +1,64 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+1️⃣ What is the difference between var, let, and const?
+answer:
+var, let and const are JavaScript variables. Before ES6, only var was used. Later, let and const were introduced.
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+Features of var i. Var is the old JavaScript variable. ii. Var can be accessed anywhere, but not outside the function scope. iii. Var is hoisted. iv. Var can be redeclared. v. Var can be reassigned.
 
----
+Features of let i. Let is used in modern JavaScript. ii. Let has block scope. It cannot be accessed outside {}. iii. Let is hoisted but stays in the Temporal Dead Zone (TDZ) until declared. iv. Let cannot be redeclared. v. Let can be reassigned.
 
-# Assignment-05: GitHub Issues Tracker
+Features of const i. Const is used in modern JavaScript. ii. Const has block scope. It cannot be accessed outside {}. iii. Const is hoisted but stays in the Temporal Dead Zone (TDZ) until declared. iv. Const cannot be redeclared. v. Const cannot be reassigned, but values inside objects and arrays can be changed.
+2️⃣ What is the spread operator (...)?
+answer:
+In modern JavaScript, the spread operator is used to spread out the elements of an object or array. It is also used as the rest operator. Depending on the use case, it is called spread operator or rest operator.
 
+Why do we use it?
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+To merge two arrays into a new array.
+To copy an array and create a new array.
+To separate an object and create a new object.
+To create two new objects.
+In a function, when parameters are fixed but arguments are more, the extra arguments can be passed using the rest operator.
+3️⃣ What is the difference between map(), filter(), and forEach()?
+answer:
+map(), filter(), and forEach() are JavaScript array methods.
 
+<---1: map()--> The purpose of map() is to work on each element of an array and return a new array.
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
+Why do we use map()?
 
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+To modify the data of an array and create a new array.
+To modify the data of objects and create a new array.
+<---2: filter()--> The purpose of filter() is to select elements from an array based on a specific condition and create a new array.
 
+Advantages of filter():
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+It allows easy selection of elements according to a condition.
+The original array does not change.
+The code is short and readable.
+<---3: forEach()--> forEach() is mainly used for looping through an array.
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
+It works on each element of the array.
+It does not create a new array
+It can update the values of the array.
+4️⃣ What is an arrow function?
+answer:
+Arrow function is the new and modern syntax of JavaScript. It is mainly used to write less code.
 
+Old syntax: function add(x, y){ return x + y; } console.log(add(5, 6));
 
----
+New syntax: const add = () => { return a + b; } console.log(add(7, 9));
 
-## 📝 Main Requirements
+Two arguments Note: If written in a single line, return is not needed. const add = (a, b) => a + b; console.log(add(7, 3));
 
-## 🎨 Design Part
+One argument const divide = s => s / 3; console.log(divide(9));
 
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
+5️⃣ What are template literals?
+answer:
+Template literals are the modern syntax of JavaScript. Their sign is ``(backticks). Writing code with old strings ('' or "") was very troublesome. If spaces were not correct, the code would not display properly in the output. Later, template literals solved this problem.
 
-## Main Page: 
+Advantages of template literals:
 
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
-
-
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
-
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
-
-
+Variables or expressions can be written inside ${variable}.
+Multiple lines of strings can be written easily.
+Code becomes shorter and cleaner.
+Works well for dynamically creating HTML.
